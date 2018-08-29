@@ -40,7 +40,7 @@ class TicketControl{
 
     gravarArquivo(){
         let jsonData = {
-            ultimo: this.ultimo = 0,
+            ultimo: this.ultimo,
             hoje: this.hoje
         }; 
         //Mandando como string json

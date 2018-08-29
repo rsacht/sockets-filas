@@ -11,6 +11,6 @@ socket.on('disconnect', function(){
 
 //Definindo que todos os buttons da tela executem esta função
 $('button').on('click', function(){
-    console.log('click');
+    socket.emit('proximoTicket');
 });
-//Clique no botão da tela novo-ticket.html e veja o resultado no console
+//Fazendo a comunicação do backend com frontend do proximo ticket
