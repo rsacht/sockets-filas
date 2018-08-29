@@ -10,4 +10,11 @@ io.on('connection', (client) => {
         console.log(proximo);
         callback(proximo);
     });    
+    //Emitir um envento 'estadoAtual'
+    //Chama o ultimo valor de ticket
+    client.emit('estadoAtual', {
+        atual: ticketControl.getUltimoTicket()
+    });
 });
+
+

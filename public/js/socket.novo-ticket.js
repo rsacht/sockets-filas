@@ -11,6 +11,12 @@ socket.on('disconnect', function(){
     console.log('Desconectado do Servidor');
 });
 
+//on 'estadoAtual'
+socket.on('estadoAtual', function(resp){
+    console.log(resp);
+    label.text(resp.atual);
+});
+
 //Definindo que todos os buttons da tela executem esta função
 $('button').on('click', function(){
     socket.emit('proximoTicket', null, function(proximoTicket){
