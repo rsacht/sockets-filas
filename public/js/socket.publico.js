@@ -23,7 +23,11 @@ socket.on('estadoAtual', function(data){
 });
 
 socket.on('ultimos4', function(data){
+    
     //console.log(data);
+    var audio = new Audio('audio/new-ticket.mp3');
+    audio.play();
+
     atualizaHTML(data.ultimos4);
 });
 
