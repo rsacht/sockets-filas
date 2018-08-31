@@ -14,6 +14,7 @@ io.on('connection', (client) => {
     //Chama o ultimo valor de ticket
     client.emit('estadoAtual', {
         atual: ticketControl.getUltimoTicket(),
+        ultimos4:ticketControl.getUltimos4()
   
     });
 

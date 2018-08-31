@@ -51,6 +51,11 @@ class TicketControl{
         return `Ticket ${this.ultimo}`;
     }
 
+    //Retornando os ultimos 4 tickets
+    getUltimos4(){
+        return this.ultimos4;
+    }
+
     //Reinicia o contador de Tickets
     reiniciarContador(){
         //Zera a variável ultimo
