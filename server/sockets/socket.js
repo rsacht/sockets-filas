@@ -30,6 +30,11 @@ io.on('connection', (client) => {
         let atenderTicket = ticketControl.atenderTicket(data.escritorio);
         //Retornando o ticket para o frontend 
         callback(atenderTicket);
+
+        //Atualiza / Notifica mundanças nos ultimos4
+        client.broadcast.emit('ultimos4',{
+            ultimos4: ticketControl.getUltimos4()
+        })
     });
 });
 

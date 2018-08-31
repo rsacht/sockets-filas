@@ -18,7 +18,12 @@ var lblTickets = [lblTicket1,lblTicket2,lblTicket3,lblTicket4];
 var leblEscritorios = [lblEscritorio1,lblEscritorio2,lblEscritorio3,lblEscritorio4];
 
 socket.on('estadoAtual', function(data){
-    console.log(data);
+    //console.log(data);
+    atualizaHTML(data.ultimos4);
+});
+
+socket.on('ultimos4', function(data){
+    //console.log(data);
     atualizaHTML(data.ultimos4);
 });
 
