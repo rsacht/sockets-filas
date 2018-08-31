@@ -71,7 +71,7 @@ class TicketControl{
             return 'Não há tickets';
         }
         //Obtendo o primeiro número de ticket pendente
-        let numeroTicket = this.tickets[0].numero;
+        let numeroTicket = this.tickets[0].numeroTicket;
         //Elimina o primeiro ticket do array
         this.tickets.shift();
         //Cria um novo ticket
@@ -89,6 +89,7 @@ class TicketControl{
         //Grava na base de dados
         this.gravarArquivo();
         //Retorna tickets a atender
+        return atenderTicket;
 
     }
 

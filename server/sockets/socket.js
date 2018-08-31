@@ -13,7 +13,8 @@ io.on('connection', (client) => {
     //Emitir um envento 'estadoAtual'
     //Chama o ultimo valor de ticket
     client.emit('estadoAtual', {
-        atual: ticketControl.getUltimoTicket()
+        atual: ticketControl.getUltimoTicket(),
+  
     });
 
     client.on('atenderTicket', (data, callback)=>{
