@@ -15,6 +15,20 @@ io.on('connection', (client) => {
     client.emit('estadoAtual', {
         atual: ticketControl.getUltimoTicket()
     });
+
+    client.on('atenderTicket', (data, callback)=>{
+        //Validação caso o usuário não informe o escritório
+        if(!data.escritorio){
+            return callback({
+                err:true,
+                mensagem: 'O escritório é necessário'
+            });
+        }
+
+        let atenderTicket = ticketControl.atenderTicket(data.escritorio);
+        //Retornando o ticket para o frontend 
+        callback(atenderTicket);
+    });
 });
 
 

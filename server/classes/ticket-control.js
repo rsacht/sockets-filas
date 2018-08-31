@@ -97,7 +97,7 @@ class TicketControl{
             ultimo: this.ultimo,
             hoje: this.hoje,
             tickets: this.tickets,
-            ultimos4 = data.ultimos4
+            ultimos4 : this.ultimos4
         }; 
         //Mandando como string json
         let jsonDataString = JSON.stringify(jsonData); 
